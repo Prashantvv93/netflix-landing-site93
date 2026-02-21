@@ -1,0 +1,39 @@
+.footer {
+    background-color: #111;
+    color: #757575;
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.footer__links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    font-size: 0.8rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+li:hover {
+    text-decoration: underline;
+}
+
+.footer__bottom {
+    margin-top: 30px;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+    .footer__links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

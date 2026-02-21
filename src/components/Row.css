@@ -1,0 +1,91 @@
+.row {
+    color: white;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    /* Spacing between rows */
+}
+
+.row h2 {
+    margin-bottom: 15px;
+    /* Spacing below title */
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.row__posters {
+    display: flex;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+    padding-left: 0;
+    /* Align with title */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.row__posters::-webkit-scrollbar {
+    display: none;
+}
+
+/* Container for Poster + Name */
+.row__posterContainer {
+    margin-right: 15px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    transition: transform 450ms;
+    flex-shrink: 0;
+    /* Prevent shrinking */
+}
+
+/* Hover Effect on Container */
+.row__posterContainer:hover {
+    transform: scale(1.08);
+    /* Scale whole container */
+    opacity: 1;
+}
+
+/* Standard Row (Backdrop) Image */
+.row__poster {
+    object-fit: cover;
+    width: 250px;
+    /* Fixed width for uniformity */
+    height: 140px;
+    /* Fixed height */
+    border-radius: 6px;
+    /* Rounded corners */
+    margin-bottom: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    /* Shadow */
+}
+
+/* Large Row (Poster) Image */
+.row__posterLarge {
+    width: 180px;
+    /* Standard poster width */
+    height: 270px;
+    /* Standard poster height */
+}
+
+.row__posterContainerLarge {
+    /* Inherits scale */
+}
+
+/* Movie Name Style */
+.row__posterName {
+    font-size: 0.9rem;
+    color: #e5e5e5;
+    text-align: center;
+    width: 250px;
+    /* Match standard width */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: 500;
+    margin-top: 5px;
+}
+
+/* Adjust name width for large posters */
+.row__posterContainerLarge .row__posterName {
+    width: 180px;
+}
